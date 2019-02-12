@@ -1,0 +1,582 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1852212523D00D7E75F /* AppDelegate.swift */; };
+		EF69E1882212523D00D7E75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1872212523D00D7E75F /* ViewController.swift */; };
+		EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69E1892212523F00D7E75F /* Assets.xcassets */; };
+		EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69E18B2212523F00D7E75F /* Main.storyboard */; };
+		EF69E1992212523F00D7E75F /* SensiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1982212523F00D7E75F /* SensiboTests.swift */; };
+		EF69E1A42212524000D7E75F /* SensiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1A32212524000D7E75F /* SensiboUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF69E1952212523F00D7E75F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF69E17A2212523D00D7E75F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF69E1812212523D00D7E75F;
+			remoteInfo = Sensibo;
+		};
+		EF69E1A02212524000D7E75F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF69E17A2212523D00D7E75F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF69E1812212523D00D7E75F;
+			remoteInfo = Sensibo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF69E1822212523D00D7E75F /* Sensibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF69E1852212523D00D7E75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF69E1872212523D00D7E75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF69E1892212523F00D7E75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF69E18C2212523F00D7E75F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF69E18E2212523F00D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF69E18F2212523F00D7E75F /* Sensibo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sensibo.entitlements; sourceTree = "<group>"; };
+		EF69E1942212523F00D7E75F /* SensiboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensiboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF69E1982212523F00D7E75F /* SensiboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensiboTests.swift; sourceTree = "<group>"; };
+		EF69E19A2212523F00D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF69E19F2212524000D7E75F /* SensiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF69E1A32212524000D7E75F /* SensiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensiboUITests.swift; sourceTree = "<group>"; };
+		EF69E1A52212524000D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF69E17F2212523D00D7E75F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E1912212523F00D7E75F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E19C2212524000D7E75F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF69E1792212523D00D7E75F = {
+			isa = PBXGroup;
+			children = (
+				EF69E1842212523D00D7E75F /* Sensibo */,
+				EF69E1972212523F00D7E75F /* SensiboTests */,
+				EF69E1A22212524000D7E75F /* SensiboUITests */,
+				EF69E1832212523D00D7E75F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF69E1832212523D00D7E75F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF69E1822212523D00D7E75F /* Sensibo.app */,
+				EF69E1942212523F00D7E75F /* SensiboTests.xctest */,
+				EF69E19F2212524000D7E75F /* SensiboUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF69E1842212523D00D7E75F /* Sensibo */ = {
+			isa = PBXGroup;
+			children = (
+				EF69E1852212523D00D7E75F /* AppDelegate.swift */,
+				EF69E1872212523D00D7E75F /* ViewController.swift */,
+				EF69E1892212523F00D7E75F /* Assets.xcassets */,
+				EF69E18B2212523F00D7E75F /* Main.storyboard */,
+				EF69E18E2212523F00D7E75F /* Info.plist */,
+				EF69E18F2212523F00D7E75F /* Sensibo.entitlements */,
+			);
+			path = Sensibo;
+			sourceTree = "<group>";
+		};
+		EF69E1972212523F00D7E75F /* SensiboTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF69E1982212523F00D7E75F /* SensiboTests.swift */,
+				EF69E19A2212523F00D7E75F /* Info.plist */,
+			);
+			path = SensiboTests;
+			sourceTree = "<group>";
+		};
+		EF69E1A22212524000D7E75F /* SensiboUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF69E1A32212524000D7E75F /* SensiboUITests.swift */,
+				EF69E1A52212524000D7E75F /* Info.plist */,
+			);
+			path = SensiboUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF69E1812212523D00D7E75F /* Sensibo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF69E1A82212524000D7E75F /* Build configuration list for PBXNativeTarget "Sensibo" */;
+			buildPhases = (
+				EF69E17E2212523D00D7E75F /* Sources */,
+				EF69E17F2212523D00D7E75F /* Frameworks */,
+				EF69E1802212523D00D7E75F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sensibo;
+			productName = Sensibo;
+			productReference = EF69E1822212523D00D7E75F /* Sensibo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF69E1932212523F00D7E75F /* SensiboTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF69E1AB2212524000D7E75F /* Build configuration list for PBXNativeTarget "SensiboTests" */;
+			buildPhases = (
+				EF69E1902212523F00D7E75F /* Sources */,
+				EF69E1912212523F00D7E75F /* Frameworks */,
+				EF69E1922212523F00D7E75F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF69E1962212523F00D7E75F /* PBXTargetDependency */,
+			);
+			name = SensiboTests;
+			productName = SensiboTests;
+			productReference = EF69E1942212523F00D7E75F /* SensiboTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF69E19E2212524000D7E75F /* SensiboUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF69E1AE2212524000D7E75F /* Build configuration list for PBXNativeTarget "SensiboUITests" */;
+			buildPhases = (
+				EF69E19B2212524000D7E75F /* Sources */,
+				EF69E19C2212524000D7E75F /* Frameworks */,
+				EF69E19D2212524000D7E75F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF69E1A12212524000D7E75F /* PBXTargetDependency */,
+			);
+			name = SensiboUITests;
+			productName = SensiboUITests;
+			productReference = EF69E19F2212524000D7E75F /* SensiboUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF69E17A2212523D00D7E75F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Colin Harris";
+				TargetAttributes = {
+					EF69E1812212523D00D7E75F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EF69E1932212523F00D7E75F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EF69E1812212523D00D7E75F;
+					};
+					EF69E19E2212524000D7E75F = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EF69E1812212523D00D7E75F;
+					};
+				};
+			};
+			buildConfigurationList = EF69E17D2212523D00D7E75F /* Build configuration list for PBXProject "Sensibo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF69E1792212523D00D7E75F;
+			productRefGroup = EF69E1832212523D00D7E75F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF69E1812212523D00D7E75F /* Sensibo */,
+				EF69E1932212523F00D7E75F /* SensiboTests */,
+				EF69E19E2212524000D7E75F /* SensiboUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF69E1802212523D00D7E75F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */,
+				EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E1922212523F00D7E75F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E19D2212524000D7E75F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF69E17E2212523D00D7E75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF69E1882212523D00D7E75F /* ViewController.swift in Sources */,
+				EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E1902212523F00D7E75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF69E1992212523F00D7E75F /* SensiboTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF69E19B2212524000D7E75F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF69E1A42212524000D7E75F /* SensiboUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF69E1962212523F00D7E75F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF69E1812212523D00D7E75F /* Sensibo */;
+			targetProxy = EF69E1952212523F00D7E75F /* PBXContainerItemProxy */;
+		};
+		EF69E1A12212524000D7E75F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF69E1812212523D00D7E75F /* Sensibo */;
+			targetProxy = EF69E1A02212524000D7E75F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF69E18B2212523F00D7E75F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF69E18C2212523F00D7E75F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF69E1A62212524000D7E75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF69E1A72212524000D7E75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		EF69E1A92212524000D7E75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sensibo/Sensibo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = Sensibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.Sensibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		EF69E1AA2212524000D7E75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sensibo/Sensibo.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = Sensibo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.Sensibo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
+		EF69E1AC2212524000D7E75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = SensiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.SensiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensibo.app/Contents/MacOS/Sensibo";
+			};
+			name = Debug;
+		};
+		EF69E1AD2212524000D7E75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = SensiboTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.SensiboTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensibo.app/Contents/MacOS/Sensibo";
+			};
+			name = Release;
+		};
+		EF69E1AF2212524000D7E75F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = SensiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.SensiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = Sensibo;
+			};
+			name = Debug;
+		};
+		EF69E1B02212524000D7E75F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 9269KSNZG8;
+				INFOPLIST_FILE = SensiboUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.SensiboUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = Sensibo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF69E17D2212523D00D7E75F /* Build configuration list for PBXProject "Sensibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF69E1A62212524000D7E75F /* Debug */,
+				EF69E1A72212524000D7E75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF69E1A82212524000D7E75F /* Build configuration list for PBXNativeTarget "Sensibo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF69E1A92212524000D7E75F /* Debug */,
+				EF69E1AA2212524000D7E75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF69E1AB2212524000D7E75F /* Build configuration list for PBXNativeTarget "SensiboTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF69E1AC2212524000D7E75F /* Debug */,
+				EF69E1AD2212524000D7E75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF69E1AE2212524000D7E75F /* Build configuration list for PBXNativeTarget "SensiboUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF69E1AF2212524000D7E75F /* Debug */,
+				EF69E1B02212524000D7E75F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF69E17A2212523D00D7E75F /* Project object */;
+}
