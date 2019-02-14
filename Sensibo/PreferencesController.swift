@@ -11,6 +11,18 @@ import Cocoa
 class PreferencesController: NSViewController {
     
     @IBOutlet var apiKeyField: NSTextField!
+    @IBOutlet var versionLabel: NSTextField!
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        
+        if let appVersion = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as? String,
+            let buildNumber = Bundle.main.infoDictionary!["CFBundleVersion"] as? String {
+            versionLabel.stringValue = "v\(appVersion) (\(buildNumber))"
+        }
+        
+        apiKeyField.stringValue = UserDefaults.standard.string(forKey: "APIKey") ?? ""
+    }
     
     @IBAction func saveClicked(_ sender: Any) {
         print("saveClicked")

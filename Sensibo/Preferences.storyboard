@@ -9,7 +9,7 @@
         <scene sceneID="3qg-Bj-THC">
             <objects>
                 <windowController id="sR0-Om-ECH" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Rpw-q8-eNJ">
+                    <window key="window" title="Sensibo Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="Rpw-q8-eNJ">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="245" y="301" width="480" height="270"/>
@@ -34,27 +34,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Yv-Kfb">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yqe-Yv-Kfb">
                                 <rect key="frame" x="18" y="233" width="51" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="API Key" id="oni-fA-7ug">
                                     <font key="font" usesAppearanceFont="YES"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-4q-zF1">
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8G6-4q-zF1">
                                 <rect key="frame" x="20" y="203" width="440" height="22"/>
-                                <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="H7f-cw-5Bq">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="om6-ku-d8X">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="om6-ku-d8X">
                                 <rect key="frame" x="391" y="13" width="70" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="8hr-fm-en7">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -63,9 +60,8 @@
                                     <action selector="saveClicked:" target="MvR-xh-cLT" id="RBl-o2-umy"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jry-qJ-CQA">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jry-qJ-CQA">
                                 <rect key="frame" x="315" y="13" width="82" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="cH1-IF-0Z0">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -77,10 +73,32 @@ Gw
                                     <action selector="cancelClicked:" target="MvR-xh-cLT" id="rHa-FA-aQh"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tbI-7Y-zbY">
+                                <rect key="frame" x="18" y="20" width="24" height="13"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="v1.0" id="WDt-Zb-zie">
+                                    <font key="font" metaFont="system" size="10"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8G6-4q-zF1" secondAttribute="trailing" constant="20" id="0Ws-wE-fcs"/>
+                            <constraint firstItem="om6-ku-d8X" firstAttribute="leading" secondItem="Jry-qJ-CQA" secondAttribute="trailing" constant="6" id="5V1-B3-MhI"/>
+                            <constraint firstItem="8G6-4q-zF1" firstAttribute="top" secondItem="yqe-Yv-Kfb" secondAttribute="bottom" constant="8" id="9Nk-8m-ToV"/>
+                            <constraint firstAttribute="bottom" secondItem="om6-ku-d8X" secondAttribute="bottom" constant="20" id="9yA-JZ-xC6"/>
+                            <constraint firstItem="yqe-Yv-Kfb" firstAttribute="top" secondItem="i0t-7C-DWN" secondAttribute="top" constant="20" id="EMg-WZ-P6q"/>
+                            <constraint firstAttribute="bottom" secondItem="tbI-7Y-zbY" secondAttribute="bottom" constant="20" id="a2i-ZE-2mh"/>
+                            <constraint firstItem="8G6-4q-zF1" firstAttribute="leading" secondItem="i0t-7C-DWN" secondAttribute="leading" constant="20" id="mGx-Iy-sc6"/>
+                            <constraint firstItem="yqe-Yv-Kfb" firstAttribute="leading" secondItem="i0t-7C-DWN" secondAttribute="leading" constant="20" id="mHS-EE-ZGZ"/>
+                            <constraint firstItem="tbI-7Y-zbY" firstAttribute="leading" secondItem="i0t-7C-DWN" secondAttribute="leading" constant="20" id="pIp-Xh-ovq"/>
+                            <constraint firstAttribute="bottom" secondItem="Jry-qJ-CQA" secondAttribute="bottom" constant="20" id="pma-m7-vJk"/>
+                            <constraint firstAttribute="trailing" secondItem="om6-ku-d8X" secondAttribute="trailing" constant="25" id="qsp-f6-tFT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="apiKeyField" destination="8G6-4q-zF1" id="3Tb-Zv-QDi"/>
+                        <outlet property="versionLabel" destination="tbI-7Y-zbY" id="qfa-xY-uBC"/>
                     </connections>
                 </viewController>
                 <customObject id="Pur-ki-q6H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
