@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */; };
+		EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF185ADF2212A66D003C2EEF /* PreferencesController.swift */; };
 		EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1852212523D00D7E75F /* AppDelegate.swift */; };
-		EF69E1882212523D00D7E75F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1872212523D00D7E75F /* ViewController.swift */; };
 		EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69E1892212523F00D7E75F /* Assets.xcassets */; };
 		EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69E18B2212523F00D7E75F /* Main.storyboard */; };
 		EF69E1992212523F00D7E75F /* SensiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1982212523F00D7E75F /* SensiboTests.swift */; };
 		EF69E1A42212524000D7E75F /* SensiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1A32212524000D7E75F /* SensiboUITests.swift */; };
+		EF69E1BF2212571D00D7E75F /* SensiboClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF69E1BE2212571D00D7E75F /* SensiboClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,9 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
+		EF185ADF2212A66D003C2EEF /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 		EF69E1822212523D00D7E75F /* Sensibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69E1852212523D00D7E75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EF69E1872212523D00D7E75F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EF69E1892212523F00D7E75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF69E18C2212523F00D7E75F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF69E18E2212523F00D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +49,7 @@
 		EF69E19F2212524000D7E75F /* SensiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69E1A32212524000D7E75F /* SensiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensiboUITests.swift; sourceTree = "<group>"; };
 		EF69E1A52212524000D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF69E1BE2212571D00D7E75F /* SensiboClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SensiboClient.framework; path = ../../Library/Frameworks/SensiboClient.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF69E1BF2212571D00D7E75F /* SensiboClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +85,7 @@
 				EF69E1972212523F00D7E75F /* SensiboTests */,
 				EF69E1A22212524000D7E75F /* SensiboUITests */,
 				EF69E1832212523D00D7E75F /* Products */,
+				EF69E1B9221254A700D7E75F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				EF69E1852212523D00D7E75F /* AppDelegate.swift */,
-				EF69E1872212523D00D7E75F /* ViewController.swift */,
 				EF69E1892212523F00D7E75F /* Assets.xcassets */,
 				EF69E18B2212523F00D7E75F /* Main.storyboard */,
 				EF69E18E2212523F00D7E75F /* Info.plist */,
 				EF69E18F2212523F00D7E75F /* Sensibo.entitlements */,
+				EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */,
+				EF185ADF2212A66D003C2EEF /* PreferencesController.swift */,
 			);
 			path = Sensibo;
 			sourceTree = "<group>";
@@ -122,6 +129,14 @@
 				EF69E1A52212524000D7E75F /* Info.plist */,
 			);
 			path = SensiboUITests;
+			sourceTree = "<group>";
+		};
+		EF69E1B9221254A700D7E75F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF69E1BE2212571D00D7E75F /* SensiboClient.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +207,11 @@
 				TargetAttributes = {
 					EF69E1812212523D00D7E75F = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					EF69E1932212523F00D7E75F = {
 						CreatedOnToolsVersion = 10.1;
@@ -228,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */,
 				EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */,
 				EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */,
 			);
@@ -254,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF69E1882212523D00D7E75F /* ViewController.swift in Sources */,
+				EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */,
 				EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +446,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Sensibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -444,6 +469,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9269KSNZG8;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = Sensibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
