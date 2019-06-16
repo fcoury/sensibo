@@ -105,7 +105,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 count += 1
                 menu.addItem(
                     NSMenuItem(
-                        title: pod.id,
+                        title: pod.name(),
                         action: #selector(AppDelegate.selectPod(_:)),
                         keyEquivalent: "\(count)"
                     )
