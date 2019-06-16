@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="sR0-Om-ECH">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="sR0-Om-ECH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,12 +19,12 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="MvR-xh-cLT" kind="relationship" relationship="window.shadowedContentViewController" id="Dbp-Su-R9g"/>
+                        <segue destination="MvR-xh-cLT" kind="relationship" relationship="window.shadowedContentViewController" id="C4S-KJ-sw9"/>
                     </connections>
                 </windowController>
                 <customObject id="gR9-28-cIY" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-172" y="171"/>
+            <point key="canvasLocation" x="-179" y="103"/>
         </scene>
         <!--Preferences Controller-->
         <scene sceneID="E38-hl-Ji1">
@@ -103,7 +103,7 @@ Gw
                 </viewController>
                 <customObject id="Pur-ki-q6H" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="535" y="146"/>
+            <point key="canvasLocation" x="463" y="97"/>
         </scene>
     </scenes>
 </document>

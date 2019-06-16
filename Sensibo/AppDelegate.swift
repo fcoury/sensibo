@@ -52,28 +52,65 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func togglePod(pod: Pod) {
-        print("togglePod")
+        print("togglePod - Pod ID: \(pod.id), Name: \(pod.name())")
         sensiboClient?.getPodState(podId: pod.id) { (state, error) in
             if let error = error {
                 print("Error: \(error.localizedDescription)")
             }
             if let state = state {
                 state.on = !state.on
-                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (success, error) in
+                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (podState, error) in
                     if let error = error {
                         print("Error: \(error.localizedDescription)")
+                    } else {
+                        print("Success: true, Pod State: \(podState.debugDescription)")
+                        pod.state = podState
+                        self.constructMenu()
                     }
-                    print("Success: \(success)")
                 }
             }
         }
     }
     
-    @objc func selectPod(_ sender: Any?) {
-        print("selectPod")
-        if let menuItem = sender as? NSMenuItem {
-            let pod = pods[Int(menuItem.keyEquivalent)!-1]
-            togglePod(pod: pod)
+    func setFanLevel(pod: Pod, fanLevel: FanLevel) {
+        print("setFanLevel - pod: \(pod.name()), fanLevel: \(fanLevel.description)")
+        sensiboClient?.getPodState(podId: pod.id) { (state, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            if let state = state {
+                state.fanLevel = fanLevel
+                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (podState, error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    } else {
+                        print("Success: true, Pod State: \(podState.debugDescription)")
+                        pod.state = podState
+                        self.constructMenu()
+                    }
+                }
+            }
+        }
+    }
+    
+    func setMode(pod: Pod, mode: ACMode) {
+        print("setMode - pod: \(pod.name()), mode: \(mode.description)")
+        sensiboClient?.getPodState(podId: pod.id) { (state, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            if let state = state {
+                state.mode = mode
+                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (podState, error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    } else {
+                        print("Success: true, Pod State: \(podState.debugDescription)")
+                        pod.state = podState
+                        self.constructMenu()
+                    }
+                }
+            }
         }
     }
     
@@ -98,18 +135,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func constructMenu() {
         let menu = NSMenu()
+        let menuGenerator = PodMenuGenerator(delegate: self)
         
         if pods.count > 0 {
-            var count = 0
             for pod in pods {
-                count += 1
-                menu.addItem(
-                    NSMenuItem(
-                        title: pod.name(),
-                        action: #selector(AppDelegate.selectPod(_:)),
-                        keyEquivalent: "\(count)"
-                    )
-                )
+                menu.addItem(menuGenerator.menuItem(for: pod))
             }
         } else {
             menu.addItem(NSMenuItem(title: "No A/C found", action: nil, keyEquivalent: ""))
@@ -129,3 +159,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
+extension AppDelegate: PodMenuDelegate {
+    
+    @objc func selectPod(_ sender: Any?) {
+        print("selectPod")
+        guard let sender = sender as? NSMenuItem, let pod = sender.representedObject as? Pod else {
+            return
+        }
+        togglePod(pod: pod)
+    }
+    
+    @objc func fanLevelMenuAction(_ sender: Any?) {
+        print("fanLevelMenuAction")
+        guard let sender = sender as? NSMenuItem, let fanChange = sender.representedObject as? FanChange else {
+            return
+        }
+        setFanLevel(pod: fanChange.pod, fanLevel: fanChange.fanLevel)
+    }
+    
+    @objc func modeMenuAction(_ sender: Any?) {
+        print("modeMenuAction")
+        guard let sender = sender as? NSMenuItem, let modeChange = sender.representedObject as? ModeChange else {
+            return
+        }
+        setMode(pod: modeChange.pod, mode: modeChange.mode)
+    }
+}

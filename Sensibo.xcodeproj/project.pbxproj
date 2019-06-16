@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */; };
 		EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF185ADF2212A66D003C2EEF /* PreferencesController.swift */; };
+		EF5B178F22B67BC400A8E632 /* PodMenuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */; };
 		EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1852212523D00D7E75F /* AppDelegate.swift */; };
 		EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF69E1892212523F00D7E75F /* Assets.xcassets */; };
 		EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69E18B2212523F00D7E75F /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		EF185ADF2212A66D003C2EEF /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
+		EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodMenuGenerator.swift; sourceTree = "<group>"; };
 		EF69E1822212523D00D7E75F /* Sensibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sensibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69E1852212523D00D7E75F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF69E1892212523F00D7E75F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				EF69E18F2212523F00D7E75F /* Sensibo.entitlements */,
 				EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */,
 				EF185ADF2212A66D003C2EEF /* PreferencesController.swift */,
+				EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */,
 			);
 			path = Sensibo;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */,
+				EF5B178F22B67BC400A8E632 /* PodMenuGenerator.swift in Sources */,
 				EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
