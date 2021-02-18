@@ -11,6 +11,7 @@ import Cocoa
 class PreferencesController: NSViewController {
     
     @IBOutlet var apiKeyField: NSTextField!
+    @IBOutlet var mainPodField: NSTextField!
     @IBOutlet var versionLabel: NSTextField!
     
     override func viewDidAppear() {
@@ -22,11 +23,15 @@ class PreferencesController: NSViewController {
         }
         
         apiKeyField.stringValue = UserDefaults.standard.string(forKey: "APIKey") ?? ""
+        mainPodField.stringValue = UserDefaults.standard.string(forKey: "MainPod") ?? ""
+        
+        self.view.window?.orderFrontRegardless()
     }
     
     @IBAction func saveClicked(_ sender: Any) {
         print("saveClicked")
         UserDefaults.standard.set(apiKeyField.stringValue, forKey: "APIKey")
+        UserDefaults.standard.set(mainPodField.stringValue, forKey: "MainPod")
         appDelegate()?.initMenu()
         closeWindow()
     }
