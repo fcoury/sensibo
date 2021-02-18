@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56883C4725DDFA3700157039 /* PodStateLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C3C25DDFA3600157039 /* PodStateLog.swift */; };
+		56883C4825DDFA3700157039 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C3D25DDFA3600157039 /* Room.swift */; };
+		56883C4925DDFA3700157039 /* SensiboClient in Resources */ = {isa = PBXBuildFile; fileRef = 56883C3F25DDFA3600157039 /* SensiboClient */; };
+		56883C4A25DDFA3700157039 /* PodState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4025DDFA3600157039 /* PodState.swift */; };
+		56883C4B25DDFA3700157039 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 56883C4125DDFA3600157039 /* Models */; };
+		56883C4C25DDFA3700157039 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 56883C4225DDFA3600157039 /* Info.plist */; };
+		56883C4D25DDFA3700157039 /* Pod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4325DDFA3700157039 /* Pod.swift */; };
+		56883C4E25DDFA3700157039 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4425DDFA3700157039 /* BaseResponse.swift */; };
+		56883C4F25DDFA3700157039 /* SensiboClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4525DDFA3700157039 /* SensiboClient.swift */; };
+		56883C5025DDFA3700157039 /* SetPodStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4625DDFA3700157039 /* SetPodStateRequest.swift */; };
 		EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */; };
 		EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF185ADF2212A66D003C2EEF /* PreferencesController.swift */; };
 		EF5B178F22B67BC400A8E632 /* PodMenuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */; };
@@ -15,7 +25,6 @@
 		EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF69E18B2212523F00D7E75F /* Main.storyboard */; };
 		EF69E1992212523F00D7E75F /* SensiboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1982212523F00D7E75F /* SensiboTests.swift */; };
 		EF69E1A42212524000D7E75F /* SensiboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF69E1A32212524000D7E75F /* SensiboUITests.swift */; };
-		EF69E1BF2212571D00D7E75F /* SensiboClient.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF69E1BE2212571D00D7E75F /* SensiboClient.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +44,31 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		563BF20925DDF39500F515A1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		56883C3C25DDFA3600157039 /* PodStateLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodStateLog.swift; sourceTree = "<group>"; };
+		56883C3D25DDFA3600157039 /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		56883C3E25DDFA3600157039 /* SensiboClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SensiboClient.h; sourceTree = "<group>"; };
+		56883C3F25DDFA3600157039 /* SensiboClient */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SensiboClient; sourceTree = "<group>"; };
+		56883C4025DDFA3600157039 /* PodState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodState.swift; sourceTree = "<group>"; };
+		56883C4125DDFA3600157039 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
+		56883C4225DDFA3600157039 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../SensiboClient/SensiboClient/Info.plist; sourceTree = "<group>"; };
+		56883C4325DDFA3700157039 /* Pod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pod.swift; sourceTree = "<group>"; };
+		56883C4425DDFA3700157039 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		56883C4525DDFA3700157039 /* SensiboClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensiboClient.swift; sourceTree = "<group>"; };
+		56883C4625DDFA3700157039 /* SetPodStateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPodStateRequest.swift; sourceTree = "<group>"; };
 		EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		EF185ADF2212A66D003C2EEF /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 		EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodMenuGenerator.swift; sourceTree = "<group>"; };
@@ -51,7 +84,6 @@
 		EF69E19F2212524000D7E75F /* SensiboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SensiboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF69E1A32212524000D7E75F /* SensiboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensiboUITests.swift; sourceTree = "<group>"; };
 		EF69E1A52212524000D7E75F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF69E1BE2212571D00D7E75F /* SensiboClient.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SensiboClient.framework; path = ../../Library/Frameworks/SensiboClient.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF69E1BF2212571D00D7E75F /* SensiboClient.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +135,17 @@
 		EF69E1842212523D00D7E75F /* Sensibo */ = {
 			isa = PBXGroup;
 			children = (
+				56883C4425DDFA3700157039 /* BaseResponse.swift */,
+				56883C4225DDFA3600157039 /* Info.plist */,
+				56883C4125DDFA3600157039 /* Models */,
+				56883C4325DDFA3700157039 /* Pod.swift */,
+				56883C4025DDFA3600157039 /* PodState.swift */,
+				56883C3C25DDFA3600157039 /* PodStateLog.swift */,
+				56883C3D25DDFA3600157039 /* Room.swift */,
+				56883C3F25DDFA3600157039 /* SensiboClient */,
+				56883C3E25DDFA3600157039 /* SensiboClient.h */,
+				56883C4525DDFA3700157039 /* SensiboClient.swift */,
+				56883C4625DDFA3700157039 /* SetPodStateRequest.swift */,
 				EF69E1852212523D00D7E75F /* AppDelegate.swift */,
 				EF69E1892212523F00D7E75F /* Assets.xcassets */,
 				EF69E18B2212523F00D7E75F /* Main.storyboard */,
@@ -137,7 +179,6 @@
 		EF69E1B9221254A700D7E75F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				EF69E1BE2212571D00D7E75F /* SensiboClient.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +193,7 @@
 				EF69E17E2212523D00D7E75F /* Sources */,
 				EF69E17F2212523D00D7E75F /* Frameworks */,
 				EF69E1802212523D00D7E75F /* Resources */,
+				563BF20925DDF39500F515A1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -251,9 +293,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56883C4B25DDFA3700157039 /* Models in Resources */,
 				EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */,
+				56883C4C25DDFA3700157039 /* Info.plist in Resources */,
 				EF69E18A2212523F00D7E75F /* Assets.xcassets in Resources */,
 				EF69E18D2212523F00D7E75F /* Main.storyboard in Resources */,
+				56883C4925DDFA3700157039 /* SensiboClient in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,8 +324,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */,
+				56883C4F25DDFA3700157039 /* SensiboClient.swift in Sources */,
+				56883C5025DDFA3700157039 /* SetPodStateRequest.swift in Sources */,
 				EF5B178F22B67BC400A8E632 /* PodMenuGenerator.swift in Sources */,
+				56883C4D25DDFA3700157039 /* Pod.swift in Sources */,
+				56883C4725DDFA3700157039 /* PodStateLog.swift in Sources */,
+				56883C4A25DDFA3700157039 /* PodState.swift in Sources */,
 				EF69E1862212523D00D7E75F /* AppDelegate.swift in Sources */,
+				56883C4825DDFA3700157039 /* Room.swift in Sources */,
+				56883C4E25DDFA3700157039 /* BaseResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,12 +499,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sensibo/Sensibo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = N3HRK533Y8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Sensibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -461,6 +515,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.Sensibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -470,12 +525,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sensibo/Sensibo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9269KSNZG8;
+				DEVELOPMENT_TEAM = N3HRK533Y8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(USER_LIBRARY_DIR)/Frameworks",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Sensibo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -484,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.colharris.Sensibo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;

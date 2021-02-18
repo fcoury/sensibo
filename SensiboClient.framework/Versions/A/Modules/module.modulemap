@@ -1,0 +1,11 @@
+framework module SensiboClient {
+  umbrella header "SensiboClient.h"
+
+  export *
+  module * { export * }
+}
+
+module SensiboClient.Swift {
+    header "SensiboClient-Swift.h"
+    requires objc
+}

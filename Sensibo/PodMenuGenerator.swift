@@ -12,6 +12,7 @@ import SensiboClient
     func selectPod(_ sender: Any?)
     func fanLevelMenuAction(_ sender: Any?)
     func modeMenuAction(_ sender: Any?)
+    func tempMenuAction(_ sender: Any?)
 }
 
 public struct FanChange {
@@ -22,6 +23,11 @@ public struct FanChange {
 public struct ModeChange {
     var pod: Pod
     var mode: ACMode
+}
+
+public struct TempChange {
+    var pod: Pod
+    var temp: Int
 }
 
 class PodMenuGenerator {
@@ -52,6 +58,11 @@ class PodMenuGenerator {
         onOffMenuItem.target = delegate
         menu.addItem(onOffMenuItem)
         
+        let tempMenuItem = NSMenuItem()
+        tempMenuItem.title = "Temp - \(pod.state?.targetTemperature.description ?? "Unknown")"
+        tempMenuItem.submenu = tempSubMenu(for: pod)
+        menu.addItem(tempMenuItem)
+        
         let fanMenuItem = NSMenuItem()
         fanMenuItem.title = "Fan - \(pod.state?.fanLevel.description ?? "Unknown")"
         fanMenuItem.submenu = fanSubMenu(for: pod)
@@ -62,6 +73,14 @@ class PodMenuGenerator {
         modeItem.submenu = modeSubMenu(for: pod)
         menu.addItem(modeItem)
         
+        return menu
+    }
+    
+    func tempSubMenu(for pod: Pod) -> NSMenu {
+        let menu = NSMenu()
+        for temp in 16...24 {
+            menu.addItem(tempMenuItem(pod: pod, temp: temp))
+        }
         return menu
     }
     
@@ -81,6 +100,14 @@ class PodMenuGenerator {
         return menu
     }
     
+    func tempMenuItem(pod: Pod, temp: Int) -> NSMenuItem {
+        let item = NSMenuItem(title: temp.description, action: #selector(PodMenuDelegate.tempMenuAction(_:)), keyEquivalent: "")
+        item.target = delegate
+        item.representedObject = TempChange(pod: pod, temp: temp)
+        item.state = pod.state?.targetTemperature == temp ? .on : .off
+        return item
+    }
+
     func fanLevelMenuItem(pod: Pod, fanLevel: FanLevel) -> NSMenuItem {
         let item = NSMenuItem(title: fanLevel.description, action: #selector(PodMenuDelegate.fanLevelMenuAction(_:)), keyEquivalent: "")
         item.target = delegate

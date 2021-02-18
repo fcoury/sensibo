@@ -93,6 +93,27 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
     }
     
+    func setTemp(pod: Pod, temp: Int) {
+        print("setTemp - pod: \(pod.name()), temp: \(temp.description)")
+        sensiboClient?.getPodState(podId: pod.id) { (state, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+            }
+            if let state = state {
+                state.targetTemperature = temp
+                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (podState, error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                    } else {
+                        print("Success: true, Pod State: \(podState.debugDescription)")
+                        pod.state = podState
+                        self.constructMenu()
+                    }
+                }
+            }
+        }
+    }
+    
     func setMode(pod: Pod, mode: ACMode) {
         print("setMode - pod: \(pod.name()), mode: \(mode.description)")
         sensiboClient?.getPodState(podId: pod.id) { (state, error) in
@@ -175,6 +196,14 @@ extension AppDelegate: PodMenuDelegate {
             return
         }
         setFanLevel(pod: fanChange.pod, fanLevel: fanChange.fanLevel)
+    }
+    
+    @objc func tempMenuAction(_ sender: Any?) {
+        print("tempMenuAction")
+        guard let sender = sender as? NSMenuItem, let tempChange = sender.representedObject as? TempChange else {
+            return
+        }
+        setTemp(pod: tempChange.pod, temp: tempChange.temp)
     }
     
     @objc func modeMenuAction(_ sender: Any?) {
