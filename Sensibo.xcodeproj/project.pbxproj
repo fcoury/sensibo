@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		56883C4E25DDFA3700157039 /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4425DDFA3700157039 /* BaseResponse.swift */; };
 		56883C4F25DDFA3700157039 /* SensiboClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4525DDFA3700157039 /* SensiboClient.swift */; };
 		56883C5025DDFA3700157039 /* SetPodStateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56883C4625DDFA3700157039 /* SetPodStateRequest.swift */; };
+		56F7230B25E0196C005593EE /* HotKey.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56F7230A25E0196C005593EE /* HotKey.xcframework */; };
+		56F7230C25E0196C005593EE /* HotKey.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56F7230A25E0196C005593EE /* HotKey.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EF185ADE2212A5E3003C2EEF /* Preferences.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */; };
 		EF185AE02212A66D003C2EEF /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF185ADF2212A66D003C2EEF /* PreferencesController.swift */; };
 		EF5B178F22B67BC400A8E632 /* PodMenuGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */; };
@@ -51,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				56F7230C25E0196C005593EE /* HotKey.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,6 +72,7 @@
 		56883C4425DDFA3700157039 /* BaseResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
 		56883C4525DDFA3700157039 /* SensiboClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SensiboClient.swift; sourceTree = "<group>"; };
 		56883C4625DDFA3700157039 /* SetPodStateRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetPodStateRequest.swift; sourceTree = "<group>"; };
+		56F7230A25E0196C005593EE /* HotKey.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = HotKey.xcframework; path = Sensibo/Carthage/Build/HotKey.xcframework; sourceTree = "<group>"; };
 		EF185ADD2212A5E3003C2EEF /* Preferences.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Preferences.storyboard; sourceTree = "<group>"; };
 		EF185ADF2212A66D003C2EEF /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
 		EF5B178E22B67BC400A8E632 /* PodMenuGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodMenuGenerator.swift; sourceTree = "<group>"; };
@@ -91,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56F7230B25E0196C005593EE /* HotKey.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,6 +184,7 @@
 		EF69E1B9221254A700D7E75F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56F7230A25E0196C005593EE /* HotKey.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

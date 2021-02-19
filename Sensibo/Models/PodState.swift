@@ -11,24 +11,24 @@ import Foundation
 public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
     case quiet = "quiet"
     case low = "low"
-    case mediumLow = "medium_low"
+    // case mediumLow = "medium_low"
     case medium = "medium"
-    case mediumHigh = "medium_high"
+    // case mediumHigh = "medium_high"
     case high = "high"
     case auto = "auto"
-    
+
     public var description: String {
         switch self {
         case .quiet:
             return "Quiet"
         case .low:
             return "Low"
-        case .mediumLow:
-            return "Medium Low"
+        // case .mediumLow:
+        //     return "Medium Low"
         case .medium:
             return "Medium"
-        case .mediumHigh:
-            return "Medium High"
+        // case .mediumHigh:
+        //     return "Medium High"
         case .high:
             return "High"
         case .auto:
@@ -40,7 +40,7 @@ public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
 public enum TemperatureUnit: String, Codable, CustomStringConvertible, CaseIterable {
     case celsius = "C"
     case fahrenheit = "F"
-    
+
     public var description: String {
         switch self {
         case .celsius:
@@ -57,7 +57,7 @@ public enum ACMode: String, Codable, CustomStringConvertible, CaseIterable {
     case fan = "fan"
     case heat = "heat"
     case auto = "auto"
-    
+
     public var description: String {
         switch self {
         case .dry:
@@ -77,7 +77,7 @@ public enum ACMode: String, Codable, CustomStringConvertible, CaseIterable {
 public enum SwingMode: String, Codable, CustomStringConvertible, CaseIterable {
     case stopped = "stopped"
     case fullRange = "rangeFull"
-    
+
     public var description: String {
         switch self {
         case .stopped:
@@ -95,7 +95,7 @@ public class PodState: Codable {
     public var targetTemperature: Int
     public var mode: ACMode
     public var swing: SwingMode
-    
+
     public init(on: Bool, fanLevel: FanLevel, temperatureUnit: TemperatureUnit, targetTemperature: Int, mode: ACMode, swing: SwingMode) {
         self.on = on
         self.fanLevel = fanLevel

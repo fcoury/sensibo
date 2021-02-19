@@ -62,17 +62,15 @@ public class SensiboClient: NSObject {
     }
     
     func sendRequest<T: Codable>(request: URLRequest, callback: @escaping (T?, Error?) -> ()) {
-        print(request.debugDescription)
+//        print(request.debugDescription)
         let dataTask = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 callback(nil, error)
             } else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                print("Response: \(String(data: data, encoding: .utf8)!)")
+//                print("Response: \(String(data: data, encoding: .utf8)!)")
                 if let getPodsResponse = try? JSONDecoder().decode(T.self, from: data) {
-                    print("Got a valid response")
                     callback(getPodsResponse, nil)
                 } else {
-                    print("Got an invalid response")
                     callback(nil, SensiboError.invalidResponse)
                 }
             } else {

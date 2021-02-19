@@ -53,27 +53,31 @@ class PodMenuGenerator {
     func subMenu(for pod: Pod) -> NSMenu {
         let menu = NSMenu()
         
-        let onOffMenuItem = NSMenuItem(title: pod.state?.on ?? false ? "On" : "Off", action: #selector(PodMenuDelegate.selectPod(_:)), keyEquivalent: "")
+        for menuItem in subMenuItems(for: pod) {
+            menu.addItem(menuItem)
+        }
+        
+        return menu
+    }
+    
+    func subMenuItems(for pod: Pod) -> [NSMenuItem] {
+        let onOffMenuItem = NSMenuItem(title: pod.state?.on ?? false ? "Turn Off" : "Turn On", action: #selector(PodMenuDelegate.selectPod(_:)), keyEquivalent: "")
         onOffMenuItem.representedObject = pod
         onOffMenuItem.target = delegate
-        menu.addItem(onOffMenuItem)
-        
+
         let tempMenuItem = NSMenuItem()
         tempMenuItem.title = "Temp - \(pod.state?.targetTemperature.description ?? "Unknown")"
         tempMenuItem.submenu = tempSubMenu(for: pod)
-        menu.addItem(tempMenuItem)
-        
+
         let fanMenuItem = NSMenuItem()
         fanMenuItem.title = "Fan - \(pod.state?.fanLevel.description ?? "Unknown")"
         fanMenuItem.submenu = fanSubMenu(for: pod)
-        menu.addItem(fanMenuItem)
-        
+
         let modeItem = NSMenuItem()
         modeItem.title = "Mode - \(pod.state?.mode.description ?? "Unknown")"
         modeItem.submenu = modeSubMenu(for: pod)
-        menu.addItem(modeItem)
         
-        return menu
+        return [tempMenuItem, fanMenuItem, modeItem, onOffMenuItem]
     }
     
     func tempSubMenu(for pod: Pod) -> NSMenu {

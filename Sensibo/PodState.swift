@@ -16,7 +16,7 @@ public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
     case mediumHigh = "medium_high"
     case high = "high"
     case auto = "auto"
-    
+
     public var description: String {
         switch self {
         case .quiet:
@@ -40,7 +40,7 @@ public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
 public enum TemperatureUnit: String, Codable, CustomStringConvertible, CaseIterable {
     case celsius = "C"
     case fahrenheit = "F"
-    
+
     public var description: String {
         switch self {
         case .celsius:
@@ -57,7 +57,7 @@ public enum ACMode: String, Codable, CustomStringConvertible, CaseIterable {
     case fan = "fan"
     case heat = "heat"
     case auto = "auto"
-    
+
     public var description: String {
         switch self {
         case .dry:
@@ -101,7 +101,7 @@ public class PodState: Codable {
     public var targetTemperature: Int
     public var mode: ACMode
     public var swing: SwingMode
-    
+
     public init(on: Bool, fanLevel: FanLevel, temperatureUnit: TemperatureUnit, targetTemperature: Int, mode: ACMode, swing: SwingMode) {
         self.on = on
         self.fanLevel = fanLevel
