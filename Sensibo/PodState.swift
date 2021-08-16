@@ -15,6 +15,7 @@ public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
     case medium = "medium"
     case mediumHigh = "medium_high"
     case high = "high"
+    case strong = "strong"
     case auto = "auto"
 
     public var description: String {
@@ -29,6 +30,8 @@ public enum FanLevel: String, Codable, CustomStringConvertible, CaseIterable {
             return "Medium"
         case .mediumHigh:
             return "Medium High"
+        case .strong:
+            return "Strong"
         case .high:
             return "High"
         case .auto:

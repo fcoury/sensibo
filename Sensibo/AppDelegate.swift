@@ -70,12 +70,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             print("Refresh \(self.loading)")
             if self.loading { return }
             if let pod = self.getMainPod() {
-                self.sensiboClient?.getPodState(podId: pod.id) { (podState, error) in
+                self.sensiboClient?.getPod(podId: pod.id) { (podData, error) in
                     if let error = error {
                         print("Error: \(error.localizedDescription)")
                     } else {
-                        print("Success: true, Pod State: \(podState.debugDescription)")
-                        pod.state = podState
+                        print("Success: true, Pod: \(podData.debugDescription)")
+                        pod.state = podData!.state
+                        pod.measurements = podData!.measurements
                         self.constructMenu()
                         self.displayMain()
                     }
@@ -152,10 +153,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             if (pod != nil && pod!.state != nil) {
                 if let button = statusItem.button {
                     let temp = String(pod!.state!.targetTemperature)
+                    let curTemp = String(pod!.measurements!.temperature)
                     let fan = pod!.state!.fanLevel
                     DispatchQueue.main.async {
                         button.contentTintColor = nil
-                        button.title = "\(temp)° \(fan)"
+                        button.title = "\(temp)° \(fan.description.prefix(1)) → \(curTemp)°"
                     }
                 }
             }
@@ -265,7 +267,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     func incrFan(pod: Pod, by: Int) {
-        let fanValues = [FanLevel.quiet, FanLevel.low, FanLevel.medium, FanLevel.high]
+        let fanValues = [FanLevel.quiet, FanLevel.low, FanLevel.medium, FanLevel.high, FanLevel.strong]
         print("incrTemp - pod: \(pod.name()), by: \(by.description)")
         self.displayLoading()
         sensiboClient?.getPodState(podId: pod.id) { (state, error) in
@@ -299,6 +301,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                             self.loading = false
                         }
                     }
+                } else {
+                    print("Error - Did not find current fan level - \(state.fanLevel)")
+                    self.loading = false
                 }
             }
         }

@@ -12,23 +12,26 @@ public class Pod: Codable {
     public let id: String
     public let room: Room?
     public var state: PodState?
-    
-    public init(id: String, room: Room? = nil, state: PodState? = nil) {
+    public var measurements: Measurements?
+
+    public init(id: String, room: Room? = nil, state: PodState? = nil, measurements: Measurements? = nil) {
         self.id = id
         self.room = room
         self.state = state
+        self.measurements = measurements
     }
-    
+
     public func name() -> String {
         if let room = self.room {
             return room.name
         }
         return id
     }
-    
+
     enum CodingKeys: String, CodingKey {
         case id
         case room
         case state = "acState"
+        case measurements
     }
 }
