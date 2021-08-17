@@ -382,28 +382,29 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func constructMenu() {
         let menu = NSMenu()
         let menuGenerator = PodMenuGenerator(delegate: self)
-        let mainPod = getMainPod()!
-        print("mainPod \(mainPod.name())")
+        if let mainPod = getMainPod() {
+            print("mainPod \(mainPod.name())")
 
-        menu.addItem(NSMenuItem(title: "Main - \(mainPod.name())", action: nil, keyEquivalent: ""))
-        let mainPodItems = menuGenerator.subMenuItems(for: mainPod)
-        for subMenu in mainPodItems {
-            menu.addItem(subMenu)
-        }
-        menu.addItem(NSMenuItem.separator())
-
-        if pods.count > 1 {
-            menu.addItem(NSMenuItem(title: "Others", action: nil, keyEquivalent: ""))
-            for pod in pods {
-                if (pod.name() != mainPod.name()) {
-                    menu.addItem(menuGenerator.menuItem(for: pod))
-                }
+            menu.addItem(NSMenuItem(title: "Main - \(mainPod.name())", action: nil, keyEquivalent: ""))
+            let mainPodItems = menuGenerator.subMenuItems(for: mainPod)
+            for subMenu in mainPodItems {
+                menu.addItem(subMenu)
             }
-        } else {
-            menu.addItem(NSMenuItem(title: "No A/C found", action: nil, keyEquivalent: ""))
-        }
+            menu.addItem(NSMenuItem.separator())
 
-        menu.addItem(NSMenuItem.separator())
+            if pods.count > 1 {
+                menu.addItem(NSMenuItem(title: "Others", action: nil, keyEquivalent: ""))
+                for pod in pods {
+                    if (pod.name() != mainPod.name()) {
+                        menu.addItem(menuGenerator.menuItem(for: pod))
+                    }
+                }
+            } else {
+                menu.addItem(NSMenuItem(title: "No A/C found", action: nil, keyEquivalent: ""))
+            }
+
+            menu.addItem(NSMenuItem.separator())
+        }
         menu.addItem(NSMenuItem(title: "Preferences...", action: #selector(AppDelegate.showPreferences(_:)), keyEquivalent: ","))
 
         menu.addItem(NSMenuItem.separator())
