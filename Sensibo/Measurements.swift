@@ -22,18 +22,19 @@ public class Measurements: Codable {
     public let batteryVoltage: String?
     public let temperature: Float
     public let humidity: Float?
+    public let feelsLike: Float?
     public let time: Time
     public let rssi: Int
-    public let piezo: [String?]
-    public let pm25: Int?
+//    public let piezo: [String?]
+//    public let pm25: Int?
 
-    public init(batteryVoltage: String? = nil, temperature: Float, humidity: Float? = nil, time: Time, rssi: Int, piezo: [String?], pm25: Int? = nil) {
+    public init(batteryVoltage: String? = nil, temperature: Float, humidity: Float? = nil, feelsLike: Float? = nil, time: Time, rssi: Int) {
+//        public init(batteryVoltage: String? = nil, temperature: Float, humidity: Float? = nil, feelsLike: Float? = nil, time: Time, rssi: Int, piezo: [String?], pm25: Int? = nil) {
       self.batteryVoltage = batteryVoltage
       self.temperature = temperature
       self.humidity = humidity
+        self.feelsLike = feelsLike
       self.time = time
       self.rssi = rssi
-      self.piezo = piezo
-      self.pm25 = pm25
     }
 }
