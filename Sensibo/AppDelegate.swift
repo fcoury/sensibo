@@ -8,7 +8,6 @@
 
 import Cocoa
 import HotKey
-import SensiboClient
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {

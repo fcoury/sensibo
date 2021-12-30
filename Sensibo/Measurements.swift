@@ -19,21 +19,15 @@ public class Time: Codable {
 }
 
 public class Measurements: Codable {
-    public let batteryVoltage: String?
     public let temperature: Float
     public let humidity: Float?
     public let time: Time
     public let rssi: Int
-    public let piezo: [String?]
-    public let pm25: Int?
 
-    public init(batteryVoltage: String? = nil, temperature: Float, humidity: Float? = nil, time: Time, rssi: Int, piezo: [String?], pm25: Int? = nil) {
-      self.batteryVoltage = batteryVoltage
+    public init(temperature: Float, humidity: Float? = nil, time: Time, rssi: Int) {
       self.temperature = temperature
       self.humidity = humidity
       self.time = time
       self.rssi = rssi
-      self.piezo = piezo
-      self.pm25 = pm25
     }
 }

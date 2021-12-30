@@ -104,13 +104,15 @@ public class PodState: Codable {
     public var targetTemperature: Int
     public var mode: ACMode
     public var swing: SwingMode
+    public var light: String
 
-    public init(on: Bool, fanLevel: FanLevel, temperatureUnit: TemperatureUnit, targetTemperature: Int, mode: ACMode, swing: SwingMode) {
+    public init(on: Bool, fanLevel: FanLevel, temperatureUnit: TemperatureUnit, targetTemperature: Int, mode: ACMode, swing: SwingMode, light: String) {
         self.on = on
         self.fanLevel = fanLevel
         self.temperatureUnit = temperatureUnit
         self.targetTemperature = targetTemperature
         self.mode = mode
         self.swing = swing
+        self.light = light
     }
 }

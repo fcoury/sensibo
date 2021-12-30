@@ -6,7 +6,8 @@
 //  Copyright © 2019 Colin Harris. All rights reserved.
 //
 
-import SensiboClient
+import Foundation
+import AppKit
 
 @objc protocol PodMenuDelegate: class {
     func selectPod(_ sender: Any?)

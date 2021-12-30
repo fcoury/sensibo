@@ -1,11 +1,10 @@
 {
   "Mac" : [
     {
-      "swiftToolchainVersion" : "5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)",
-      "hash" : "21c13af3c1ad3dbbc2b242b715a82f7f7ab4ec7c40cafbd761f8802c917d41c9",
+      "hash" : "b6fd90407c98babdab03e3606034d1a1324d71332531a247085f5df88b2c9f23",
       "name" : "HotKey",
-      "container" : "HotKey.xcframework",
-      "identifier" : "macos-arm64_x86_64"
+      "linking" : "dynamic",
+      "swiftToolchainVersion" : "5.5.2 (swiftlang-1300.0.47.5 clang-1300.0.29.30)"
     }
   ],
   "watchOS" : [
