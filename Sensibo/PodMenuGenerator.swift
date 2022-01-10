@@ -14,6 +14,7 @@ import AppKit
     func fanLevelMenuAction(_ sender: Any?)
     func modeMenuAction(_ sender: Any?)
     func tempMenuAction(_ sender: Any?)
+    func swingMenuAction(_ sender: Any?)
 }
 
 public struct FanChange {
@@ -29,6 +30,11 @@ public struct ModeChange {
 public struct TempChange {
     var pod: Pod
     var temp: Int
+}
+
+public struct SwingChange {
+    var pod: Pod
+    var swing: SwingMode
 }
 
 class PodMenuGenerator {
@@ -78,6 +84,10 @@ class PodMenuGenerator {
         modeItem.title = "Mode - \(pod.state?.mode.description ?? "Unknown")"
         modeItem.submenu = modeSubMenu(for: pod)
         
+        let swingItem = NSMenuItem()
+        modeItem.title = "Swing - \(pod.state?.swing.description ?? "Unknown")"
+        modeItem.submenu = swingSubMenu(for: pod)
+        
         return [tempMenuItem, fanMenuItem, modeItem, onOffMenuItem]
     }
     
@@ -105,6 +115,14 @@ class PodMenuGenerator {
         return menu
     }
     
+    func swingSubMenu(for pod: Pod) -> NSMenu {
+        let menu = NSMenu()
+        for swing in SwingMode.allCases {
+            menu.addItem(swingMenuItem(pod: pod, swing: swing))
+        }
+        return menu
+    }
+    
     func tempMenuItem(pod: Pod, temp: Int) -> NSMenuItem {
         let item = NSMenuItem(title: temp.description, action: #selector(PodMenuDelegate.tempMenuAction(_:)), keyEquivalent: "")
         item.target = delegate
@@ -126,6 +144,14 @@ class PodMenuGenerator {
         item.target = delegate
         item.representedObject = ModeChange(pod: pod, mode: mode)
         item.state = pod.state?.mode == mode ? .on : .off
+        return item
+    }
+    
+    func swingMenuItem(pod: Pod, swing: SwingMode) -> NSMenuItem {
+        let item = NSMenuItem(title: swing.description, action: #selector(PodMenuDelegate.swingMenuAction(_:)), keyEquivalent: "")
+        item.target = delegate
+        item.representedObject = SwingChange(pod: pod, swing: swing)
+        item.state = pod.state?.swing == swing ? .on : .off
         return item
     }
 }

@@ -358,6 +358,32 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
     }
+    
+    func setSwing(pod: Pod, swing: SwingMode) {
+        print("setSwing - pod: \(pod.name()), swing: \(swing.description)")
+        self.displayLoading()
+        sensiboClient?.getPodState(podId: pod.id) { (state, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                        self.loading = false
+            }
+            if let state = state {
+                state.swing = swing
+                self.sensiboClient?.setPodState(podId: pod.id, podState: state) { (podState, error) in
+                    if let error = error {
+                        print("Error: \(error.localizedDescription)")
+                        self.loading = false
+                    } else {
+                        print("Success: true, Pod State: \(podState.debugDescription)")
+                        pod.state = podState
+                        self.constructMenu()
+                        self.displayMain()
+                        self.loading = false
+                    }
+                }
+            }
+        }
+    }
 
     @objc func switchAllOn(_ sender: Any?) {
         print("switchAllOn")
@@ -445,5 +471,13 @@ extension AppDelegate: PodMenuDelegate {
             return
         }
         setMode(pod: modeChange.pod, mode: modeChange.mode)
+    }
+    
+    @objc func swingMenuAction(_ sender: Any?) {
+        print("swingMenuAction")
+        guard let sender = sender as? NSMenuItem, let swingChange = sender.representedObject as? SwingChange else {
+            return
+        }
+        setSwing(pod: swingChange.pod, swing: swingChange.swing)
     }
 }
