@@ -37,6 +37,7 @@ public struct SwingChange {
     var swing: SwingMode
 }
 
+
 class PodMenuGenerator {
     
     let delegate: PodMenuDelegate
@@ -46,8 +47,12 @@ class PodMenuGenerator {
     }
     
     public func menuItem(for pod: Pod) -> NSMenuItem {
+        var temp = "N/A"
+        if let measurements = pod.measurements {
+            temp = "\(measurements.temperature)°"
+        }
         let podMenuItem = NSMenuItem(
-            title: pod.name(),
+            title: "\(pod.name()) → \(temp)",
             action: #selector(PodMenuDelegate.selectPod(_:)),
             keyEquivalent: ""
         )
@@ -68,6 +73,8 @@ class PodMenuGenerator {
     }
     
     func subMenuItems(for pod: Pod) -> [NSMenuItem] {
+        // let temDisplayItem = NSMenuItem(title: "\(pod.state?.measurements?.temperature)°", action: nil, keyEquivalent: "")
+                                      
         let onOffMenuItem = NSMenuItem(title: pod.state?.on ?? false ? "Turn Off" : "Turn On", action: #selector(PodMenuDelegate.selectPod(_:)), keyEquivalent: "")
         onOffMenuItem.representedObject = pod
         onOffMenuItem.target = delegate
@@ -85,10 +92,10 @@ class PodMenuGenerator {
         modeItem.submenu = modeSubMenu(for: pod)
         
         let swingItem = NSMenuItem()
-        modeItem.title = "Swing - \(pod.state?.swing.description ?? "Unknown")"
-        modeItem.submenu = swingSubMenu(for: pod)
+        swingItem.title = "Swing - \(pod.state?.swing.description ?? "Unknown")"
+        swingItem.submenu = swingSubMenu(for: pod)
         
-        return [tempMenuItem, fanMenuItem, modeItem, onOffMenuItem]
+        return [tempMenuItem, fanMenuItem, modeItem, swingItem, onOffMenuItem]
     }
     
     func tempSubMenu(for pod: Pod) -> NSMenu {
